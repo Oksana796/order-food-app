@@ -2,12 +2,12 @@ import "./Header.css";
 import mealsImg from "../images/meals.jpg";
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <>
       <header className="header">
         <h1>OrderFood</h1>
-       <HeaderCartButton />
+       <HeaderCartButton onClick={props.onShow}/>
       </header>
       <div className="main-image">
         <img src={mealsImg} alt="a table full of food" />

@@ -1,7 +1,7 @@
 import "./Modal.css";
 
 const Backdrop = (props) => {
-  return <div className="backdrop"></div>;
+  return <div className="backdrop" onClick={props.onClose}></div>;
 };
 
 const ModalOverlay = (props) => {
@@ -14,10 +14,10 @@ const ModalOverlay = (props) => {
 
 const Modal = (props) => {
   return (
-    <>
-      <Backdrop />
+    <div>
+      <Backdrop onClose={props.onClose} />
       <ModalOverlay>{props.children}</ModalOverlay>
-    </>
+    </div>
   );
 };
 

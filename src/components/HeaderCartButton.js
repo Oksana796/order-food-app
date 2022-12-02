@@ -1,8 +1,8 @@
 import "./HeaderCartButton.css";
 
-const HeaderCartButton = () => {
+const HeaderCartButton = (props) => {
   return (
-    <button className="button">
+    <button className="button" onClick={props.onClick} >
       <span className="icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"
